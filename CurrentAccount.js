@@ -1,7 +1,7 @@
 export  class CurrentAccount {
     agency;
     client;
-    _balance;
+    _balance = 0;
     
     //sacar
     withdraw(value){
@@ -20,6 +20,14 @@ export  class CurrentAccount {
         this._balance += value
       }
     }
+    
 
-    transfer()
+    transfer(value, targetAccount){
+      //subtract the value
+      const amount2transfer = this.withdraw(value)
+      
+      //deposit in the target account
+      targetAccount.deposit(value)
+    }
+    
 }

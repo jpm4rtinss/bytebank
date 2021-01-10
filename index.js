@@ -4,6 +4,7 @@ import {CurrentAccount} from "./CurrentAccount.js"
 
 //legenda:
 // Amount withdrawn == Valor sacado
+// Target account == conta de destino
 
 // client 1
 
@@ -25,7 +26,8 @@ client2.cpf = 11144433309
 const account2 = new CurrentAccount()
 account2.client = client2
 
-
+account1.deposit(400)
+account1.transfer(200, account2)
 
 console.log(account1)
 console.log(account2)
