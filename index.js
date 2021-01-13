@@ -7,27 +7,16 @@ import {CurrentAccount} from "./CurrentAccount.js"
 // Target account == conta de destino
 
 // client 1
-const account1 = new CurrentAccount ()
-account1.client = new Client()
-account1.client.name = "Ricardo"
-account1.client.cpf = 11122233309
-account1.agency= 1001
-account1._balance = 0
+const client1 = new Client("Ricardo", 11122233309)
+const account1 = new CurrentAccount (client1, 1001)
 
 
 
 // client 2 
+const client2 = new Client("Alice", 11144433309 )
+const account2 = new CurrentAccount(client2, 1001)
 
 
-
-const account2 = new CurrentAccount()
-account2.client = new Client()
-account2.client.name = "Alice"
-account2.client.cpf = 11144433309
-account2.agency= 1001
-
-account1.deposit(400)
-account1.transfer(200, account2)
 
 console.log(account1)
 console.log(account2)

@@ -20,6 +20,10 @@ export  class CurrentAccount {
       return this._balance
     }
     
+    constructor(client ,agency){
+     this.client = client
+     this.agency = agency
+    }
     //sacar
     withdraw(value){
         //check if are enough money to withdraw
