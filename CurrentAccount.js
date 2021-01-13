@@ -1,7 +1,24 @@
+import { Client } from "./Client.js";
+
 export  class CurrentAccount {
     agency;
-    client;
+    _client;
+
+    set client(newValue){
+      if(newValue instanceof Client){
+         this._client = newValue 
+      }
+    }
+
+    get client (){
+      return this._client
+    }
+
     _balance = 0;
+
+    get balance(){
+      return this._balance
+    }
     
     //sacar
     withdraw(value){
