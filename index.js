@@ -18,5 +18,4 @@ const account2 = new CurrentAccount(client2, 1001)
 
 
 
-console.log(account1)
-console.log(account2)
+console.log(CurrentAccount.totalAccounts)

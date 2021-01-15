@@ -3,6 +3,7 @@ import { Client } from "./Client.js";
 export  class CurrentAccount {
     agency;
     _client;
+    static totalAccounts = 0;
 
     set client(newValue){
       if(newValue instanceof Client){
@@ -23,6 +24,7 @@ export  class CurrentAccount {
     constructor(client ,agency){
      this.client = client
      this.agency = agency
+     CurrentAccount.totalAccounts += 1
     }
     //sacar
     withdraw(value){
