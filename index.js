@@ -1,6 +1,7 @@
 //import files
 import {Client} from "./Client.js"
 import {CurrentAccount} from "./CurrentAccount.js"
+import { SavingAccount } from "./SavingAccount.js"
 
 //legenda:
 // Amount withdrawn == Valor sacado
@@ -17,5 +18,6 @@ const client2 = new Client("Alice", 11144433309 )
 const account2 = new CurrentAccount(client2, 1001)
 
 
+const savingAccount1 = new SavingAccount(50, client2, 1001)
 
-console.log(CurrentAccount.totalAccounts)
+console.log(savingAccount1)
