@@ -16,10 +16,10 @@ const account1 = new Account (0, client1, 1001)
 
 // client 2 
 const client2 = new Client("Alice", 11144433309 )
-const account2 = new Account(0, client2, 1001)
+const account2 = new CurrentAccount(0, client2, 1001)
 
 
-const savingAccount1 = new Account(50, client2, 1001)
+const savingAccount1 = new SavingAccount(50, client2, 1001)
 
 console.log(savingAccount1)
 console.log(account2)
