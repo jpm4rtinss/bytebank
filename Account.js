@@ -4,6 +4,11 @@ export class Account {
         this._client = client
         this._agency = agency
 
+        //warning a dev that he should avoid start a new account using the Account class instead
+        if(this.constructor == Account){
+
+        }
+
     }
 
     set client(newValue){
