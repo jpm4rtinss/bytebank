@@ -1,13 +1,16 @@
+//abstract class
 export class Account {
     constructor(openBalance, client, agency){
+        //prevent a dev that he must not start a new account using the Account class instead a specific class
+        if(this.constructor == Account){
+          throw new Error('WARNNING - you should not start a new account from the Account class, use specific classes')
+        }
+      
         this._balance = openBalance
         this._client = client
         this._agency = agency
 
-        //warning a dev that he should avoid start a new account using the Account class instead
-        if(this.constructor == Account){
-
-        }
+        
 
     }
 
