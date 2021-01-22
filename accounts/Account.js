@@ -33,13 +33,12 @@ export class Account {
 
       //sacar
     withdraw(value){
-         
-         let rate = 1
-         return this._withdraw(value, rate)
+      // as every account has a rate and the withdraw method is specific, if it's not defined in the creation of the class, when have a new object, prevent with error that call the method    
+         throw Error('the withdraw method of Account Class is abstract ')
     }
     _withdraw(value, rate){
 
-      const amountWithdrawn = amountWithdrawn*rate 
+      const amountWithdrawn = value*rate 
 
      //check if are enough money to withdraw
      if (this._balance >= amountWithdrawn){
