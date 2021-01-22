@@ -4,7 +4,17 @@ export class Employee {
       this._salary = salary
       this._cpf = cpf
 
-      this.bonusSalary = 1;
+      this._bonusSalary = 1
+      this._password
        
     }
+    
+    get password(){
+        return this._password
+    }
+    registerPassword(password){
+        this._password = password
+    }
+
+
 }
