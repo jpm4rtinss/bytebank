@@ -9,6 +9,10 @@ export class Employee {
        
     }
     
+    authenticate(password){
+        return password == this._password
+    }
+
     get password(){
         return this._password
     }
